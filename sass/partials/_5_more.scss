@@ -1,0 +1,15 @@
+.more {
+  @include bg(l);
+}
+
+@include mediaLg {
+  .more {
+    .content-text {
+      flex-basis: 60%;
+    }
+
+    .content-image {
+      flex-basis: 40%;
+    }
+  }
+}

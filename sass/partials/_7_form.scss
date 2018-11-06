@@ -1,0 +1,115 @@
+.form {
+  @include bg(o, 0);
+
+  &__content-text {
+    text-align: center;
+    padding: 4vw;
+  }
+
+  .subtitle {
+    max-width: 900px;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.message {
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-width: 500px;
+
+  .input-field {
+    position: relative;
+
+    label {
+      position: absolute;
+      transform: translate(7px, -21.5px);
+      color: $black;
+      transition: all 0.25s ease;
+      // backface-visibility: hidden;
+      pointer-events: none;
+      font-size: .9em;
+      opacity: 0;
+    }
+
+    &__input {
+      position: relative;
+      margin-bottom: .7vw;
+      background: transparent;
+      border: .6px solid #000;
+      padding: .3em;
+      width: 100%;
+
+      &:focus+label {
+        transform: translate(7px, -40px);
+        font-size: .6em;
+        opacity: 1;
+      }
+
+      @supports (display: grid) {
+        margin-bottom: 0;
+      }
+
+      &--description {
+        height: 20vw;
+        max-height: 200px;
+      }
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-gap: .7em;
+    grid-template-areas:
+      "email subject"
+      "description description"
+      "button button";
+
+    @include mediaMd {
+      grid-column: 1fr;
+      grid-template-areas:
+        "email"
+        "subject"
+        "description"
+        "button";
+
+    }
+
+    .input-field {
+
+      &--email {
+        grid-area: email;
+      }
+
+      &--subject {
+        grid-area: subject;
+      }
+
+      &--description {
+        grid-area: description;
+      }
+    }
+
+    &__btn {
+      grid-area: button;
+    }
+  }
+
+  @include mediaMd {
+    width: 65vw;
+    max-width: 350px;
+  }
+
+  &__btn {
+    background: #000;
+    border: .6px solid #000;
+    color: #fff;
+    padding: .3em;
+    text-transform: uppercase;
+  }
+}

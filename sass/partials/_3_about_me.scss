@@ -1,0 +1,43 @@
+.about-me {
+  @include bg(p);
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: block;
+      border-bottom: 1px solid #000;
+      width: 4.2vw;
+      min-width: 30px;
+      margin-right: 6px;
+    }
+  }
+
+  .subtitle::after {
+    content: none;
+  }
+}
+
+.social-media-group {
+  margin-top: 20px;
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+
+  .fab {
+    background: $darkgray;
+    color: #fff;
+    font-size: .8em;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+      background: #000;
+    }
+  }
+}

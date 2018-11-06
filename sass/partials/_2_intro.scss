@@ -1,0 +1,21 @@
+.intro {
+  overflow: hidden;
+  @include bg(a, 0);
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 117%;
+    bottom: -70px;
+    right: 30px;
+    object-fit: cover;
+  }
+
+  .content-text {
+    margin-bottom: 12vw;
+  }
+
+  .content-left {
+    z-index: 1;
+  }
+}

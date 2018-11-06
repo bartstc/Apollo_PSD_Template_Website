@@ -1,0 +1,44 @@
+$slider-width: 100%;
+$slide-count: 5;
+
+.slider {
+  position: relative;
+
+  &__container {
+    width: $slider-width;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url('../../img/letter-o-light.png');
+      background-repeat: no-repeat;
+      background-size: auto calc(250px + 30vw);
+      background-position: 2.5vw 0;
+    }
+  }
+}
+
+.slider-window {
+  width: calc(#{$slider-width} * #{$slide-count});
+  height: 100%;
+  display: flex;
+  transition: transform .7s ease-in-out;
+
+  @include mediaMd {
+    transition: transform .4s ease-in-out;
+  }
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  @include bg-slide;
+}
