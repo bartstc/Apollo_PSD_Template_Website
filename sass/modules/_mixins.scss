@@ -6,7 +6,7 @@
 }
 
 @mixin bg($img, $xpos: 2.5vw) {
-  background-image: url('../../img/letter-#{$img}.png');
+  background-image: url('../../build/img/letter-#{$img}.png');
   background-repeat: no-repeat;
   background-size: auto calc(250px + 30vw);
   position: relative;
@@ -16,7 +16,7 @@
 @mixin bg-slide {
   @for $i from 1 through 5 {
     &:nth-child(#{$i}) {
-      background-image: url('../../img/slide-#{$i}.jpeg');
+      background-image: url('../../build/img/slide-#{$i}.jpeg');
       background-position: center;
       background-size: cover;
     }
