@@ -1,0 +1,22 @@
+{
+  "name": "apollo",
+  "version": "1.0.0",
+  "description": "Portfolio website example using HTML, CSS(SASS) and JS based on Apollo PSD Template.",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartstc/Apollo_PSD_Template_Website.git"
+  },
+  "author": "Bart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bartstc/Apollo_PSD_Template_Website/issues"
+  },
+  "homepage": "https://github.com/bartstc/Apollo_PSD_Template_Website",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
